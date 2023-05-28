@@ -4,10 +4,10 @@ class NewsController {
     res.render('news');
   }
 
-   // [GET] /new/slug
+  // [GET] /new/slug
   show(req, res) {
     res.send('new detail');
   }
 }
 
-module.exports = new NewsController;
+module.exports = new NewsController();
