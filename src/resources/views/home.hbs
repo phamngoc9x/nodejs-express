@@ -1,1 +1,18 @@
-<h1>Home page</h1>
+<div class="mt-4">
+  <div class="row">
+    {{#each courses}}
+      <div class="col-md-6 col-lg-4">
+        <div class="card mb-4" style="width: 18rem;">
+          <a href="/courses/{{ this.slug }}">
+          <img src="https://i.ytimg.com/vi/{{this.videoId}}/maxresdefault.jpg" alt="{{ this.name }}" class="w-100 h-auto">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><a href="/courses/{{ this.slug }}">{{this.name}}</a></h5>
+            <p class="card-text">{{ this.description}}</p>
+            <a href="/courses/{{ this.slug }}" class="btn btn-primary">Mua khoá học</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
